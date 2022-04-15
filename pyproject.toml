@@ -5,8 +5,9 @@ description = ""
 authors = ["Barham Farraj <barhamfarraj@icloud.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.9.5"
 requests = "^2.27.1"
+beautifulsoup4 = "^4.11.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

@@ -1,16 +1,18 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+
 class webScraper:
   def __init__(self, URL):
     self.URL= URL
     self.page= requests.get(URL)
     self.soup= BeautifulSoup(self.page.content, 'html.parser')
     self.searchfor= self.soup.find_all(string=re.compile("citation needed"))
+    
   def get_citations_needed_count(self):
     count=len(self.searchfor)
     print(count)
-    return 
+    return count
   
   def get_citations_needed_report(self):
     for paragraph in self.soup.find_all('p'):
